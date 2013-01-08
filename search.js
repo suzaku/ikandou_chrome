@@ -1,11 +1,11 @@
 (function () {
-    var WRAPPER_TMPL =  '<div class="gray_ad">'+
-        '<h2><a style="color: #072" href="http://ikandou.com/" target="_blank">爱看豆电子书下载››</a></h2>' +
-        '<ul class="bs"><li class="msg" style="display:none;color:#333;">' +
+    var WRAPPER_TMPL =  '<div class="gray_ad ikd_box">'+
+        '<h2><a href="http://ikandou.com/" target="_blank">爱看豆电子书下载››</a></h2>' +
+        '<ul class="bs"><li class="msg">' +
         '万卷书上还没有这本书,你可以考虑<a target="_blank" href="http://ikandou.com/book/upload">上传一本</a>,'+
         '<br>或者<a href="http://ikandou.com">去看看</a>其它有趣的电子书</li></ul>'+
         '</div>';
-    var ITEM_TMPL_RELATED = '<li><a target="_blank" href="{{=url }}" title="{{=author }}">{{=title }}</a><b class="pl" style="padding-left:5px;">{{=rating }}星</b><span style="padding-left:5px;color:green;">{{=related }}</span></li>';
+    var ITEM_TMPL_RELATED = '<li><a target="_blank" href="{{=url }}" title="{{=author }}">{{=title }}</a><b class="pl">{{=rating }}星</b><span>{{=related }}</span></li>';
 
     var processRelatedResult = function (results) {
         var element = $(WRAPPER_TMPL);

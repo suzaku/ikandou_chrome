@@ -1,0 +1,24 @@
+.ikd_box h2 a:link,
+.ikd_box h2 a:visited,
+.ikd_box h2 a:focus {
+    color: #072;
+}
+
+.ikd_box h2 a:hover {
+    background: #072;
+    color: #FFF;
+}
+
+.ikd_box li.msg {
+    display:none;
+    color:#333;
+}
+
+.ikd_box b.pl {
+    padding-left:5px;
+}
+
+.ikd_box b.pl + span {
+    padding-left: 5px;
+    color: #072;
+}
