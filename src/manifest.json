@@ -16,5 +16,8 @@
         "run_at": "document_end"
     }
   ],
-  "permissions": ["http://ikandou.com/api/*"]
+  "permissions": ["http://ikandou.com/api/*"],
+  "web_accessible_resources": [
+    "templates/book_page_widget.html"
+  ]
 }
