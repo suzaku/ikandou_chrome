@@ -21,6 +21,7 @@
                     "http://book.douban.com/people/*/collect*"
                    ],
         "js": ["jquery-1.8.3.min.js", "doulist.js"],
+        "css": ["ikandou.css"],
         "run_at": "document_end"
     }
   ],

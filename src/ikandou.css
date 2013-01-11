@@ -22,3 +22,11 @@
     padding-left: 5px;
     color: #072;
 }
+
+li a.ikd-lnk {
+    background: #072;
+    padding: 2px 4px 1px;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 5px;
+}
