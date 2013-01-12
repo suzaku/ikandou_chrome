@@ -4,25 +4,26 @@
     var bookId2Els = {};
     var bookIds = [];
     var isListMode = window.location.search.match(/mode=list/);
+    var getBookId, updatePage;
 
     if (!isListMode) {
-        function getBookId(item) {
+        getBookId = function (item) {
             var bookURL = item.find(".title a").attr('href');
             return bookURL.match(/\d+/)[0];
         }
 
-        function updatePage(bid, res) {
+        updatePage = function (bid, res) {
             var el = bookId2Els[bid];
             var target = el.find("li.intro + li");
             target.append('<a class="ikd-lnk" target="_blank" href="' +
                             res.url + '">爱看豆</a>');
         }
     } else {
-        function getBookId(item) {
+        getBookId = function (item) {
             return item.attr('id').match(/\d+/)[0];
         }
 
-        function updatePage(bid, res) {
+        updatePage = function (bid, res) {
             var el = bookId2Els[bid];
             var target = el.find(".title");
             target.append('<a class="ikd-lnk" target="_blank" href="' +
