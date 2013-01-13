@@ -1,9 +1,8 @@
 ikandou_chrome
 ==============
 
-爱看豆在豆瓣的Chrome插件。你可以在豆瓣读书页面看到这本书在爱看豆
-是否可以下载，同时在爱看豆的想读页面可以看到你所有想读的书在爱看豆
-的下载链接。
+爱看豆在豆瓣的Chrome插件。
+在豆瓣图书条目, 想读, 图书搜索结果等页面, 显示每本书对应的爱看豆链接.
 
 Follow the instruction [here](http://developer.chrome.com/extensions/getstarted.html#load) to load this extension in developer mode.
 
