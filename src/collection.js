@@ -1,5 +1,4 @@
 (function () {
-    var API = "http://ikandou.com/api/getbooks";
     var subjectEls = $(".article .item");
     var bookId2Els = {};
     var bookIds = [];
