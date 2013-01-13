@@ -23,6 +23,12 @@
         "js": ["lib/jquery-1.8.3.min.js", "lib/ikandou.js", "collection.js"],
         "css": ["ikandou.css"],
         "run_at": "document_end"
+    },
+    {
+        "matches": ["http://book.douban.com/subject_search*" ],
+        "js": ["lib/jquery-1.8.3.min.js", "lib/ikandou.js", "search_result.js"],
+        "css": ["ikandou.css"],
+        "run_at": "document_end"
     }
   ],
   "permissions": ["http://ikandou.com/api/*"],

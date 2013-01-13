@@ -23,10 +23,16 @@
     color: #072;
 }
 
-li a.ikd-lnk {
+li a.ikd-lnk,
+.star a.ikd-lnk {
     background: #072;
     padding: 2px 4px 1px;
     color: #fff;
     border-radius: 3px;
     margin-left: 5px;
+}
+
+li a.ikd-lnk:hover,
+.star a.ikd-lnk:hover {
+    background: #092;
 }
