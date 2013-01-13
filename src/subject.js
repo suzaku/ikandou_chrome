@@ -30,13 +30,5 @@
         ptags = ptags + $(this).text()+",";
     });
     var subjectId = document.location.href.match(/(\d+)/)[1];
-    var matchUrl = "http://ikandou.com/api/related?version=1.1&bookid=" + subjectId + "&tags=" + ptags;
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", matchUrl, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) {
-           processRelatedResult(JSON.parse(xhr.response));
-        }
-    }
-    xhr.send();
+    ikd.searchBook(subjectId, ptags, processRelatedResult);
 })();

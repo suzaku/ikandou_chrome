@@ -38,23 +38,11 @@
         bookIds.push(bookId);
     })
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET",
-             API + "?ids=" + bookIds.join(","),
-             true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) {
-           var result = JSON.parse(xhr.response);
-           $.each(result, function (bid, ob) {
-               if (ob) {
-                   updatePage(bid, ob);
-               }
-           });
-
-           delete bookId2Els;
-           delete bookIds;
-           delete subjectEls;
-        }
-    }
-    xhr.send();
+    ikd.searchMultiBooks(bookIds, function (result) {
+       $.each(result, function (bid, ob) {
+           if (ob) {
+               updatePage(bid, ob);
+           }
+       });
+    });
 })();
