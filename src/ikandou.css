@@ -24,6 +24,7 @@
 }
 
 li a.ikd-lnk,
+td a.ikd-lnk,
 .star a.ikd-lnk {
     background: #072;
     padding: 2px 4px 1px;
@@ -33,6 +34,13 @@ li a.ikd-lnk,
 }
 
 li a.ikd-lnk:hover,
+td a.ikd-lnk:hover,
 .star a.ikd-lnk:hover {
     background: #092;
+}
+
+td a.ikd-lnk {
+    margin-left: 0;
+    position: relative;
+    top: 1px;
 }
