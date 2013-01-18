@@ -1,23 +1,24 @@
 (function () {
-    var subjectEls = $(".article .item");
+    var isListMode = window.location.search.match(/mode=list/);
     var bookId2Els = {};
     var bookIds = [];
-    var isListMode = window.location.search.match(/mode=list/);
-    var getBookId, updatePage;
+    var subjectEls, getBookId, updatePage;
 
     if (!isListMode) {
+        subjectEls = $(".interest-list .subject-item");
         getBookId = function (item) {
-            var bookURL = item.find(".title a").attr('href');
+            var bookURL = item.find(".info h2 a").attr('href');
             return bookURL.match(/\d+/)[0];
         }
 
         updatePage = function (bid, res) {
             var el = bookId2Els[bid];
-            var target = el.find("li.intro + li");
+            var target = el.find(".info h2");
             target.append('<a class="ikd-lnk" target="_blank" href="' +
                             res.url + '">爱看豆</a>');
         }
     } else {
+        subjectEls = $(".article .item");
         getBookId = function (item) {
             return item.attr('id').match(/\d+/)[0];
         }
