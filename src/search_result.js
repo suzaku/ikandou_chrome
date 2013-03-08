@@ -1,11 +1,11 @@
 (function () {
-    var subjectEls = $(".article .item");
+    var subjectEls = $(".subject-list .subject-item");
     var bookId2Els = {};
     var bookIds = [];
     var getBookId, updatePage;
 
     getBookId = function (item) {
-        var bookURL = item.find("td:first a").attr('href');
+        var bookURL = item.find(".pic a").attr('href');
         return bookURL.match(/\d+/)[0];
     };
 
