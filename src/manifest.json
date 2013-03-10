@@ -35,6 +35,11 @@
         "js": ["lib/jquery-1.8.3.min.js", "lib/ikandou.js", "doulist.js"],
         "css": ["ikandou.css"],
         "run_at": "document_end"
+    },
+    {
+        "matches": ["http://ikandou.com/book/upload" ],
+        "js": ["auto_dblink.js"],
+        "run_at": "document_end"
     }
   ],
   "permissions": [
