@@ -5,6 +5,10 @@
         var element = $("<div class='gray_ad ikd_box'></div>");
         var tmpl_url = chrome.extension.getURL("templates/book_page_widget.html");
 
+        function show_no_match_tip () {
+            element.find(".msg").show();
+        }
+
         element.prependTo($(".aside")).load(tmpl_url, function () {
             $.each(results, function (idx, value) {
                 var item = $(ITEM_TMPL_RELATED.replace("{{=url }}",value.url)
@@ -17,11 +21,19 @@
                 }
                 element.find("ul").append(item);
             });
-        });
 
-        if (!results.length) {
-            element.find(".msg").show();
-        }
+            var exact_match = false;
+            for (var i in results) {
+                if (!results[i].related) {
+                    exact_match = true;
+                    break;
+                }
+            }
+
+            if (!exact_match || !results.length) {
+                show_no_match_tip();
+            }
+        });
     }
 
     var ptags="";
