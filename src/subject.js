@@ -22,15 +22,11 @@
                 element.find("ul").append(item);
             });
 
-            var exact_match = false;
-            for (var i in results) {
-                if (!results[i].related) {
-                    exact_match = true;
-                    break;
-                }
-            }
+            var just_guesses = results.every(function (element) {
+                return !!element.related;
+            });
 
-            if (!exact_match || !results.length) {
+            if (just_guesses || !results.length) {
                 show_no_match_tip();
             }
         });
