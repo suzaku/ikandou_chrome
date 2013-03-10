@@ -1,6 +1,6 @@
 {
   "name": "爱看豆找书",
-  "version": "0.41",
+  "version": "0.5",
   "manifest_version": 2,
   "description": "用爱看豆搜索电子书资源",
   "icons": {
@@ -37,8 +37,14 @@
         "run_at": "document_end"
     }
   ],
-  "permissions": ["http://ikandou.com/api/*"],
+  "permissions": [
+    "http://ikandou.com/api/*",
+    "contextMenus"
+  ],
   "web_accessible_resources": [
     "templates/book_page_widget.html"
-  ]
+  ],
+  "background": {
+    "scripts": ["contextmenu.js"]
+  }
 }
