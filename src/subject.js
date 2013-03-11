@@ -32,11 +32,8 @@
         });
     }
 
-    var ptags="";
-    var tags = $('div#db-tags-section a');
-    $.each(tags, function(idx, tag) {
-        ptags = ptags + $(this).text()+",";
-    });
+    var tagElms = $('div#db-tags-section a').get();
+    var tagStr = tagElms.map(function (v) { return v.text }).join(",");
     var subjectId = document.location.href.match(/(\d+)/)[1];
-    ikd.searchBook(subjectId, ptags, processRelatedResult);
+    ikd.searchBook(subjectId, tagStr, processRelatedResult);
 })();
